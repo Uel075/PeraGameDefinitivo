@@ -1,18 +1,76 @@
-const barra = document.getElementById("barrita");
-const opciones = document.getElementById("tabla_dialogo");
-const sinrespuesta = document.getElementById("sinrespuesta");
-function tiempo()
-{
-    barra.width -= 1;
-    temp=setTimeout("tiempo()", 1);
-    if(barra.width === 0)
-    {
+
+
+function tiempo() {
+    document.getElementById("barrita_img").width -= 1;
+    temp = setTimeout("tiempo()", 1);
+    if (document.getElementById("barrita_img").width === 0) {
         clearTimeout(temp);
-        barra.style.display = "none";
-        opciones.style.display = "none";
-        sinrespuesta.style.display = "block";
+        document.getElementById("barrita_img").style.display = "none";
+        document.getElementById("tabla_dialogoo").style.display = "none";
+        document.getElementById("sinrespuesta").style.display = "block";
     }
 }
+
+function elegir(celdaoculta, celdavista) {
+    const oculta = document.getElementById(celdaoculta);
+    const visible = document.getElementById(celdavista);
+
+    clearTimeout(temp);
+    document.getElementById("miAudio").pause();
+    oculta.style.display = "none";
+    visible.style.fontSize = "25pt";
+    document.getElementById("tabla").border = 0;
+    barra.style.display = "none";
+
+    if (oculta.style.display = "none") {
+
+    }
+}
+
+function pausar() {
+    document.getElementById("miAudio").pause();
+}
+function play() {
+    document.getElementById("miAudio").play();
+}
+
+function cambiarimagen(div_imagen) {
+    // visor.src=ruta;
+    const div_ruta = document.getElementById(div_imagen);
+
+    document.getElementById("divantiguo").style.display = "none";
+    document.getElementById("divcasino").style.display = "none";
+    document.getElementById("divparque").style.display = "none";
+    div_ruta.style.display = "";
+}
+
+function abrirjuego(html) {
+    window.open(html, "_self");
+}
+
+
+function mover() {
+    const velocidad = 2;
+    const vel = -2;
+    const pera = document.getElementById("antiguo_andando");
+    pera.style.left = parseInt(pera.style.left) + vel + "px";
+    tempera = setTimeout(mover, velocidad);
+    if (parseInt(pera.style.left) === 650) {
+        clearTimeout(tempera);
+        document.getElementById("barrita").style.display = "";
+        document.getElementById("barrita_img").style.display = "";
+        document.getElementById("tabla_dialogoo").style.display = "";
+        tiempo();
+    }
+}
+
+
+
+
+
+
+
+
 /*
 function elegir(celda)
 {
@@ -65,63 +123,3 @@ function elegir(celda) {
     if (tabla) tabla.border = 0;
 }
 */
-
-function elegir(celdaoculta, celdavista)
-{
-    const oculta = document.getElementById(celdaoculta);
-    const visible = document.getElementById(celdavista);
-
-    clearTimeout(temp);
-    document.getElementById("miAudio").pause();
-    oculta.style.display = "none";
-    visible.style.fontSize = "25pt";
-    document.getElementById("tabla").border = 0;
-    barra.style.display = "none";
-
-    if (oculta.style.display = "none")
-    {
-        
-    } 
-}
-
-function pausar()
-{
-    document.getElementById("miAudio").pause();
-}
-function play()
-{
-    document.getElementById("miAudio").play();
-}
-
-    function cambiarimagen(div_imagen){
-        // visor.src=ruta;
-        const div_ruta = document.getElementById(div_imagen);
-
-        document.getElementById("divantiguo").style.display = "none";
-        document.getElementById("divcasino").style.display = "none";
-        document.getElementById("divparque").style.display = "none";
-        div_ruta.style.display = "";
-}
-
-function abrirjuego(html)
-{
-    window.open(html, "_self");
-}
-
-
-function mover()
-{
-    const velocidad = 2;
-    const vel = -2;
-    const pera = document.getElementById
-    ("antiguo_andando");
-    pera.style.left = parseInt(pera.style.left) + vel+"px";
-    tempera=setTimeout("mover()", velocidad);
-    if(parseInt(pera.style.left) === 650)
-        {
-            clearTimeout(tempera);
-            barra.style.display = "block";
-            opciones.style.display = "block";
-            tiempo();
-        }
-}
