@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="css.css" type="text/css">
     <script src="js.js"></script>
 </head>
-<body onload="tiempo()" background="./Imagenes/Casino_edificio.jpg">
-    <div class="tabla_dialogo" name="tabla_dialogo" id="tabla_dialogo">
+<body onload="mover()" background="./Imagenes/Casino_edificio.jpg">
+    <div class="tabla_dialogo" name="tabla_dialogo" id="tabla_dialogo" style="display: none;">
         <table width="80%" border="0" align="center" cellspacing="0" cellpadding="15" name="tabla" id="tabla">
             <tr>
                 <td name="celda1" id="celda1" onclick="elegir('celda2','celda1')">
@@ -29,7 +29,7 @@
             </tr>
         </table>
     </div>
-    <div class="tiempo">
+    <div class="tiempo" name="barrita" id="barrita" style="display: none;">
             <img src="./Imagenes/barra_tiempo_redondeada.png" alt="" height="10" width="1300" name="barra" id="barra">
     </div>
     <audio id="miAudio" src="./Imagenes/to-frighten-121407.mp" autoplay>--

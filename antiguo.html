@@ -8,13 +8,14 @@
     <script src="js.js"></script>
 </head>
 <body onload="mover()" background="./Imagenes/antiguo/heraldo_int.jpg">
-    <div class="tabla_dialogo" name="tabla_dialogo" id="tabla_dialogo" >
+
+    <div class="tabla_dialogo" name="tabla_dialogo" id="tabla_dialogo" style="display: none;">
         <table width="80%" border="0" align="center" cellspacing="0" cellpadding="15" name="tabla" id="tabla" >
             <tr>
                 <td name="celda1" id="celda1" onclick="elegir('celda2','celda1')">
                     HOLA
                 </td>
-                <td name="celda2" id="celda2" onclick="elegir('celda1', 'celda2')">
+                <td name="celda2" id="celda2" onclick="elegir('celda1','celda2')">
                     ABE
                 </td>
             </tr>
@@ -29,7 +30,7 @@
             </tr>
         </table>
     </div>
-    <div class="tiempo" style="display: 'none';">
+    <div class="tiempo" style="display: none;" >
             <img src="./Imagenes/barra_tiempo_redondeada.png" alt="" height="10" width="1300" name="barra" id="barra">
     </div>
     <audio id="miAudio" src="./Imagenes/to-frighten-121407.mp" autoplay>--

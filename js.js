@@ -1,12 +1,8 @@
+const barra = document.getElementById("barrita");
+const opciones = document.getElementById("tabla_dialogo");
+const sinrespuesta = document.getElementById("sinrespuesta");
 function tiempo()
 {
-    const barra = document.getElementById("barra");
-    const opciones = document.getElementById("tabla_dialogo");
-    const sinrespuesta = document.getElementById("sinrespuesta");
-
-    barra.style.display = "";
-    opciones.style.display = "";
-    sinrespuesta.style.display = "";
     barra.width -= 1;
     temp=setTimeout("tiempo()", 1);
     if(barra.width === 0)
@@ -117,7 +113,6 @@ function mover()
 {
     const velocidad = 2;
     const vel = -2;
-
     const pera = document.getElementById
     ("antiguo_andando");
     pera.style.left = parseInt(pera.style.left) + vel+"px";
@@ -125,7 +120,8 @@ function mover()
     if(parseInt(pera.style.left) === 650)
         {
             clearTimeout(tempera);
+            barra.style.display = "block";
+            opciones.style.display = "block";
             tiempo();
-
         }
 }
