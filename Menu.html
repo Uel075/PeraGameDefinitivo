@@ -10,24 +10,33 @@
 <body align="center">
     <table align="center" border="1" cellspacing="0" cellpadding="15">
         <tr>
-            <td onmouseover="cambiarimagen('antiguo')">
-                Antiguo Heraldo de Aragón
+            <td onmouseover="cambiarimagen('divantiguo')" onclick="abrirjuego('antiguo.html')">
+                <img name="antiguoext" id="antiguoext" src="./Imagenes/antiguo/heraldo_ext.jpg" alt="" height="200">
             </td>
-            <td onmouseover="cambiarimagen('casino')">
-                Casino
+            <td onmouseover="cambiarimagen('divcasino')" onclick="abrirjuego('casino.html')">
+                <img name="casino" id="casino" src="./Imagenes/casino/cartel_casino.jpg" alt="" height="200">
             </td>
-            <td>
-                Parque Natural
+            <td onmouseover="cambiarimagen('divparque')" onclick="abrirjuego('parque.html')">
+                <img src="./Imagenes/Parque/parque_arbol.jpg" alt="" height="200">
             </td>
         </tr>
     </table>
-    <div name="divantiguo" id="divantiguo">
-        <img name="antiguo" id="antiguo" src="./Imagenes/antiguo/_DSC0052.jpg" alt="" height="200" style="display: none;">
+    <div name="divantiguo" id="divantiguo" style="display: none;">
+        <img name="antiguoint" id="antiguoint" src="./Imagenes/antiguo/heraldo_int.jpg"  height="500"> <br>
+        <p>
+            Este es el antiguo edificio del Heraldo de Aragón
+        </p>
     </div>
-    <div name="divcasino" id="divcasino">
-        <img name="casino" id="casino" src="./Imagenes/casino/_DSC1020-53.jpg" alt="" height="200" style="display: none;">
+    <div name="divcasino" id="divcasino" style="display: none;">
+        <img name="casinoint" id="casinoint" src="./Imagenes/casino/casino_edificio.jpg" alt="" height="500">
+        <p>
+            Este es el antiguo casino de Montesblancos
+        </p>
     </div>
-    <div>
-        <img src="./Imagenes/Parque/_DSC0341.jpg" alt="" height="200" style="display: none;">
+    <div name="divparque" id="divparque" style="display: none;">
+        <img src="./Imagenes/Parque/parque_patos.jpg" alt="" height="500">
+        <p>
+            Este es el parque que está cerca de ParqueVenecia
+        </p>
     </div>
 </body>

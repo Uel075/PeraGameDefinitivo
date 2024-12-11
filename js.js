@@ -3,6 +3,10 @@ function tiempo()
     const barra = document.getElementById("barra");
     const opciones = document.getElementById("tabla_dialogo");
     const sinrespuesta = document.getElementById("sinrespuesta");
+
+    barra.style.display = "";
+    opciones.style.display = "";
+    sinrespuesta.style.display = "";
     barra.width -= 1;
     temp=setTimeout("tiempo()", 1);
     if(barra.width === 0)
@@ -92,15 +96,36 @@ function play()
 {
     document.getElementById("miAudio").play();
 }
-let a = false;
-function lay()
-{
-    a = window.alert("¿Estás seguro de querer salir?");
+
+    function cambiarimagen(div_imagen){
+        // visor.src=ruta;
+        const div_ruta = document.getElementById(div_imagen);
+
+        document.getElementById("divantiguo").style.display = "none";
+        document.getElementById("divcasino").style.display = "none";
+        document.getElementById("divparque").style.display = "none";
+        div_ruta.style.display = "";
 }
 
-    function cambiarimagen(mapa){
-        // visor.src=ruta;
-        const mapas = document.getElementById(mapa);
+function abrirjuego(html)
+{
+    window.open(html, "_self");
+}
 
-        mapas.style.display = "";
+
+function mover()
+{
+    const velocidad = 2;
+    const vel = -2;
+
+    const pera = document.getElementById
+    ("antiguo_andando");
+    pera.style.left = parseInt(pera.style.left) + vel+"px";
+    tempera=setTimeout("mover()", velocidad);
+    if(parseInt(pera.style.left) === 650)
+        {
+            clearTimeout(tempera);
+            tiempo();
+
+        }
 }

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antiguo Heraldo</title>
+    <link rel="stylesheet" href="css.css" type="text/css">
+    <script src="js.js"></script>
+</head>
+<body onload="mover()" background="./Imagenes/antiguo/heraldo_int.jpg">
+    <div class="tabla_dialogo" name="tabla_dialogo" id="tabla_dialogo" >
+        <table width="80%" border="0" align="center" cellspacing="0" cellpadding="15" name="tabla" id="tabla" >
+            <tr>
+                <td name="celda1" id="celda1" onclick="elegir('celda2','celda1')">
+                    HOLA
+                </td>
+                <td name="celda2" id="celda2" onclick="elegir('celda1', 'celda2')">
+                    ABE
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="sinrespuesta" name="sinrespuesta" id="sinrespuesta" style="display: none;">
+        <table border="0" width="80%" align="center">
+            <tr>
+                <td>
+                    <input type="button" value="...">
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="tiempo" style="display: 'none';">
+            <img src="./Imagenes/barra_tiempo_redondeada.png" alt="" height="10" width="1300" name="barra" id="barra">
+    </div>
+    <audio id="miAudio" src="./Imagenes/to-frighten-121407.mp" autoplay>--
+    </audio>
+
+        <img src="./Imagenes/antiguo/antiguo_andado.jpg" alt="" name="antiguo_andando" id="antiguo_andando" style="position: absolute; left: 1600px; top: 350px;">
+</body>
