@@ -10,13 +10,16 @@ function abrirjuego(html) {
 }
 // Antiguo
 function tiempo() {
+    barrita.style.display = "";
+    celda2.style.display = "";
+    tabla.border = 1;
     barrita_img.width -= 1;
-    temp = setTimeout("tiempo()", 1);
+    temp = setTimeout(tiempo, 1);
     if (barrita_img.width === 0) {
         clearTimeout(temp);
         barrita_img.style.display = "none";
         tabla_dialogoo.style.display = "none";
-        sinrespuesta.style.display = "block";
+        sinrespuesta.style.display = "";
     }
 }
 function elegir(celdaoculta, celdavista) {
@@ -27,10 +30,7 @@ function elegir(celdaoculta, celdavista) {
     oculta.style.display = "none";
     visible.style.fontSize = "25pt";
     tabla.border = 0;
-    barra.style.display = "none";
-    if (oculta.style.display = "none") {
-
-    }
+    barrita.style.display = "none";
 }
 function mover() {
     const pera = document.getElementById("antiguo_andando");
@@ -45,12 +45,30 @@ function mover() {
         tiempo();
         */
         pera.src = "./Imagenes/antiguo/antiguo_parado1.png";
+        peradialogo();
+        celda1.innerHTML = "¿Qué haces aquí co?";
+        prueba = setTimeout(() => {
+            tiempo();
+            primeraseleccion();
+        }, 2000);
+        window.alert("hola");
     }
 }
-function seguir() {
+function peradialogo() {
     tabla_dialogoo.style.display = "";
     celda2.style.display = "none";
 }
+function primeraseleccion() {
+    celda1.innerHTML = "Vine para grabar";
+    celda2.innerHTML = "Vivir la vida";
+}
+/*
+function mostraropciones() 
+    {
+        barrita.style.display = "";
+        barrita_img.style.display = "";
+        celda2.style.display = "";
+    }
 /*
 function pausar() {
     document.getElementById("miAudio").pause();
