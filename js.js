@@ -31,6 +31,12 @@ function elegir(celdaoculta, celdavista) {
     visible.style.fontSize = "25pt";
     tabla.border = 0;
     barrita.style.display = "none";
+    if (visible.innerHTML = "Vivir la vida") {
+        visible.innerHTML = "aaaa"
+    }
+    else if(visible.innerHTML = "Vine para grabar"){
+        visible.innerHTML = "bbbb"
+    }
 }
 function mover() {
     const pera = document.getElementById("antiguo_andando");
@@ -51,7 +57,6 @@ function mover() {
             tiempo();
             primeraseleccion();
         }, 2000);
-        window.alert("hola");
     }
 }
 function peradialogo() {
