@@ -12,7 +12,7 @@ function abrirjuego(html) {
 function tiempo() {
     barrita.style.display = "";
     celda2.style.display = "";
-    tabla.border = 1;
+    tabla_dialogoo.table.border = 1;
     barrita_img.width -= 1;
     temp = setTimeout(tiempo, 1);
     if (barrita_img.width === 0) {
